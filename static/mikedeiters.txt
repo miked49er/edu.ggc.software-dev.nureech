@@ -1,0 +1,20 @@
+Trying 172.20.0.90...
+Connected to 172.20.0.90.
+Escape character is '^]'.
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mike Deiters</title>
+    <style>
+      body {
+        background: #0033cc;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is my webpage. There are many like it but this one is mine.</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, minus cum obcaecati placeat, tempore omnis nam adipisci officiis qui officia non reiciendis nemo quasi, quos hic quibusdam voluptate ipsum est!</p>
+  </body>
+</html>
