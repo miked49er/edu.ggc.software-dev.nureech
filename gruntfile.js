@@ -38,7 +38,7 @@ module.exports = function(grunt) {
         files: ['templates/*.html']
       } // html
     } // watch
-  }) // initConfig
+  }); // initConfig
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -48,4 +48,4 @@ module.exports = function(grunt) {
   grunt.registerTask('js', ['uglify']);
   grunt.registerTask('css', ['compass:dev']);
   grunt.registerTask('default', ['watch']);
-}
+};
