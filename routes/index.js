@@ -49,4 +49,70 @@ router.post('/login', function(req, res, next) {
   })(req, res, next);
 });
 
+router.post('/reeches', auth, function(req, res, next) {
+  var reech = new Reech(req.body);
+  reech.author = req.payload.username;
+
+  post.save(function(err, reech) {
+    res.json(reech);
+  });
+});
+
+router.get('/reeches', function(req, res, next) {
+  Reech.find(function(err, reeches) {
+    if (err) { next(err); }
+
+    res.json(reeches);
+  });
+});
+
+router.param('reech', function(req, res, next, id) {
+  var query = Reech.findById(id);
+
+  query.exec(function(err, reech) {
+    if (err) { return next(err); }
+    if (!reech) { return next(new Error('can\'t find post')); }
+
+    req.reech = reech;
+    return next();
+  });
+});
+
+router.get('/reeches/:reech', function(reg, res, next) {
+  req.reech.populate('comments', function(err, reech) {
+    if (err) { return next(err); }
+
+    res.json(reech);
+  });
+});
+
+router.post('/reeches/:reech/comments', auth, function(req, res, next) {
+  var comment = new Comment(req.body);
+  comment.reech = req.reech;
+  comment.author = req.payload.username;
+
+  comment.save(function(err, comment) {
+    if (err) { return next(err); }
+
+    req.reech.comments.push(comment);
+    req.reech.save(function(err, reech) {
+      if (err) { return next(err); }
+
+      res.json(comment);
+    });
+  });
+});
+
+router.param('comment', function(req, res, next, id) {
+  var query = Comment.findById(id);
+
+  query.exec(function(err, comment) {
+    if (err) { return next(err); }
+    if (!comment) { return next(new Error('can\'t find the comment')); }
+
+    req.comment = comment;
+    return next();
+  });
+});
+
 module.exports = router;
