@@ -1,29 +1,22 @@
-<title> Login to NuReech</title>
+<section>
+  <div ng-show="An error has occured" class="alert-danger row"></div>
 
-<div class="page-header">
-<h1> Reeching Out </h1>
-</div>
+  <form ng-submit="logIn()"
+    style="margin-top:50px;">
+    <h3> Reech in!</h3>
 
-<div ng-show="An error has occured" class="alert-danger row">
-</div>
+    <div class="form-group">
+    <input type="text"
+      placeholder="Enter Username"
+      ng-model="user.username"></input>
+    </div>
 
-<form ng-submit-"login()"
-  style="margin-top:50px;">
-<h3> Reech in!</h3>
+    <div class="form-group">
+    <input type="password"
+      placeholder="password"
+      ng-model="user.password"></input>
 
-<div class="form-group">
-<input type="text"
-  class="form-control"
-  placeholder="Enter Username"
-  ng-model="user.username"></input>
-</div>
-
-<div class="form-group">
-<input type="password"
-  class="form-control"
-  placeholder="password"
-  ng-model="user.password"></input>
-
-</div>
-<button type="submit" class="btn btn-primary"> Lets Reech in! </button>
-</form>
+    </div>
+    <button type="submit" class="btn btn-primary">Lets Reech in!</button>
+  </form>
+</section>
