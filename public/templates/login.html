@@ -1,6 +1,12 @@
 <section>
-  <div ng-show="An error has occured" class="alert-danger row"></div>
+  <div  class="page-header">
+    <h1>Welcome to NuReech</h1>
+    <p>Start Reeching Out</p>
+  </div>
 
+  <div ng-show="error" class="alert-danger row">
+    <span>{{error.message}}</span>
+  </div>
   <form ng-submit="logIn()"
     style="margin-top:50px;">
     <h3> Reech in!</h3>
