@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "predev": "grunt",
+    "predev": "",
     "dev": "node-dev ./bin/www & grunt watch"
   },
   "author": "Mike Deiters & Jonathan Nguyen",
