@@ -1,16 +1,9 @@
+<section>
+  <form ng-submits="addPost()">
+    <input type="text" ng-models="titles"></input>
+  <button type="Submit"> Reech Out!</button>
 
-        <main>
-          <div class="NuReech">
-            <h1> Welcome to NuReech</h1>
-            <P> Start Reeching out</p>
-            </div>
-          </main>
-
-<form ng-submits="addPost()">
-  <input type="text" ng-models="titles"></input>
-<button type="Submit"> Reech Out!</button>
-
-<div ng-repeat ="reech in reeches"
-{{post}}
-dš
-</div>
+  <div ng-repeat ="reech in reeches">
+  {{reech}}
+  </div>
+</section>
