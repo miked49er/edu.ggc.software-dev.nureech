@@ -53,7 +53,7 @@ router.post('/reeches', auth, function(req, res, next) {
   var reech = new Reech(req.body);
   reech.author = req.payload.username;
 
-  post.save(function(err, reech) {
+  reech.save(function(err, reech) {
     res.json(reech);
   });
 });
