@@ -11,7 +11,7 @@
     <h3>You need to <a href="/#/login">Log In</a> or <a href="/#/register">Register</a> before you can reech out.</h3>
   </div>
 
-  <div ng-repeat="reech in reeches | orderBy:-timestamp">
+  <div ng-repeat="reech in reeches | orderBy:'-timestamp'">
     <p>{{reech.body}}</p>
     <span ng-show="reech.author">posted by {{reech.author}}</span>
     <span ng-show="reech.timestamp">{{reech.timestamp | timeago}}</span>
