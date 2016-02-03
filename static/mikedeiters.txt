@@ -1,6 +1,18 @@
 Trying 172.20.0.90...
+Trying 172.20.0.90...
 Connected to 172.20.0.90.
 Escape character is '^]'.
+HTTP/1.1 200 OK
+Date: Wed, 03 Feb 2016 20:52:22 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Wed, 27 Jan 2016 13:38:23 GMT
+ETag: "20e-52a50ea7d1462"
+Accept-Ranges: bytes
+Content-Length: 526
+Vary: Accept-Encoding
+Connection: close
+Content-Type: text/html
+
 <!DOCTYPE html>
 <html>
   <head>
