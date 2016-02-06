@@ -19,7 +19,7 @@
 </div>
 
 <div class="comments">
-  <span ng-repeat="post in reech.comments | orderBy:'timestamp'">
+  <span ng-repeat="comment in reech.comments | orderBy:'timestamp'">
   <span ng-show="comment.author">{{comment.author}}</span>
   <span ng-show="comment.timestamp">{{comment.timestamp | timeago}}</span>
   <span>{{comment.body}}</span>
