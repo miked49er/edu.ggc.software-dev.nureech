@@ -1,4 +1,4 @@
-require "suzy"
+require "susy"
 css_dir = 'public/stylesheets'
 sass_dir = 'lib/sass'
 javascripts_dir = 'public/javascripts'
