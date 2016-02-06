@@ -71,14 +71,14 @@ router.param('reech', function(req, res, next, id) {
 
   query.exec(function(err, reech) {
     if (err) { return next(err); }
-    if (!reech) { return next(new Error('can\'t find post')); }
+    if (!reech) { return next(new Error('can\'t find reech')); }
 
     req.reech = reech;
     return next();
   });
 });
 
-router.get('/reeches/:reech', function(reg, res, next) {
+router.get('/reeches/:reech', function(req, res, next) {
   req.reech.populate('comments', function(err, reech) {
     if (err) { return next(err); }
 
