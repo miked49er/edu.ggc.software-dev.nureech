@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100|Ubuntu:300,500);
+
+body {
+  @include clearfix;
+  font-family: $font-primary;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  line-height: 120%;
+  background: $offwhite;
+  color: $silver;
+}
+
+#{headings()} {
+  font-family: $font-secondary;
+  font-weight: bold;
+  color: $red;
+  @include text-shadow(#000);
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: darken($red, 15);
+  margin-bottom: .4rem;
+  border-bottom: 1px solid lighten($silver, 15);
+  padding-top: 10px;
+}
+
+h3 {
+  font-weight: lighter;
+  font-size: 1.4rem;
+}
+
+a {
+  font-size: 1rem;
+  color: lighten($red, 7);
+  text-decoration: none;
+
+  &:hover {
+    color: darken($red, 7);
+    text-decoration: none;
+    cursor: pointer;
+    background: $lightgray;
+  }
+
+  &:active {
+    text-decoration: none;
+    color: lighten($red, 7);
+  }
+}
+
+form {
+  @include clearfix;
+  margin-bottom: 10px;
+
+  input {
+    @include border-radius;
+    background: #fff;
+    border: $silver;
+    padding: 5px 10px;
+  } // input
+
+  button {
+    @include border-radius;
+    background: $silver;
+    border: lighten($silver, 5);
+    color: $red;
+    padding: 5px 10px;
+  } // button
+}
