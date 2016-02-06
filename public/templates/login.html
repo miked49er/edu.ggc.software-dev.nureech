@@ -7,8 +7,7 @@
   <div ng-show="error" class="alert-danger row">
     <span>{{error.message}}</span>
   </div>
-  <form ng-submit="logIn()"
-    style="margin-top:50px;">
+  <form ng-submit="logIn()">
     <h3> Reech in!</h3>
 
     <div class="form-group">
@@ -23,6 +22,6 @@
       ng-model="user.password"></input>
 
     </div>
-    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit">Login</button>
   </form>
 </section>
