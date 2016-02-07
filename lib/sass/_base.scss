@@ -40,7 +40,7 @@ a {
     color: darken($red, 7);
     text-decoration: none;
     cursor: pointer;
-    background: $lightgray;
+    // background: $lightgray;
   } // a:hover
 
   &:active {
@@ -48,6 +48,18 @@ a {
     color: lighten($red, 7);
   } // a:active
 } // a
+
+ul {
+
+  li {
+
+    &:hover {
+      background: $lightgray;
+      text-decoration: none;
+      cursor: pointer;
+    } // li:hover
+  } // li
+} // ui
 
 form {
   @include clearfix;
