@@ -95,8 +95,6 @@ $large             : 56em;
   } // page-header-line
 
   .postAReech {
-    // margin-left: 17px;
-    // margin-right: 17px;
     margin-bottom: 30px;
 
     input {
@@ -163,6 +161,26 @@ $large             : 56em;
     } // button
   } // reechIn
 
+  .comment {
+    background: darken(#fff, 20);
+
+    span {
+      color: lighten(#000, 10);
+    } // span
+
+    p {
+      color: lighten($red, 8);
+    } // p
+  } // comment
+
+  .addComment {
+    margin-top: 20px;
+
+    input {
+      margin-right: 10px;
+    } // input
+  } // addComment
+
   @include at-breakpoint($small) {
     @include single-transition(all, .5s, ease-in);
 
@@ -189,6 +207,11 @@ $large             : 56em;
       } // input
     } // reechIn
 
+    .addComment {
+      margin-top: 20px;
+      width: 375px;
+    } // addComment
+
     .homecontent {
       @include span-columns(5);
       @include pre(1);
@@ -209,6 +232,11 @@ $large             : 56em;
         margin-right: 10px;
       } // input
     } // postAReech
+
+    .comments {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    } // comments
   } // medium
 
   @include at-breakpoint($large) {
