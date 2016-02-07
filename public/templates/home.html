@@ -1,20 +1,23 @@
 <section>
   <div class="page-header">
     <h1>Start Reeching Out</h1>
+    <div class="page-header-line"></div>
   </div>
 
-  <form ng-submit="nuReech()" ng-show="isLoggedIn()">
+  <form ng-submit="nuReech()" ng-show="isLoggedIn()" class="postAReech">
     <input type="text" placeholder="What is going on?" ng-model="body"></input>
     <button type="submit">Reech Out!</button>
   </form>
-  <div ng-hide="isLoggedIn()">
-    <h3>You need to <a href="/#/login">Log In</a> or <a href="/#/register">Register</a> before you can reech out.</h3>
-  </div>
+  <div class="homecontent">
+    <div ng-hide="isLoggedIn()">
+      <h3>You need to <a href="/#/login">Log In</a> or <a href="/#/register">Register</a> before you can reech out.</h3>
+    </div>
 
-  <div ng-repeat="reech in reeches | orderBy:'-timestamp'">
-    <p>{{reech.body}}</p>
-    <span ng-show="reech.author">posted by {{reech.author}}</span>
-    <span ng-show="reech.timestamp">{{reech.timestamp | timeago}}</span>
-    <span><a href="#/reeches/{{reech._id}}">Comments</a></span>
+    <div class="reech" ng-repeat="reech in reeches | orderBy:'-timestamp'">
+      <p>{{reech.body}}</p>
+      <span ng-show="reech.author">posted by {{reech.author}}</span>
+      <span ng-show="reech.timestamp">{{reech.timestamp | timeago}}</span>
+      <span><a href="#/reeches/{{reech._id}}">Comments</a></span>
+    </div>
   </div>
 </section>

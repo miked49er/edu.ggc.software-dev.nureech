@@ -12,16 +12,17 @@
   </head>
     <body ng-controller="mainCtrl">
 
-      <nav ng-controller="navCtrl">
+      <div id="header" class="navi" ng-controller="navCtrl">
+        <a id="logo" href="/#/home"><img alt="NuReech" ng-src="images/NuReech-LLC-Logo.svg"></a>
         <ul>
           <li ng-show="isLoggedIn()"><a>{{currentUser()}}</a></li>
           <li ng-show="isLoggedIn()"><a ng-click="logOut()">Log Out</a></li>
           <li ng-hide="isLoggedIn()"><a href="/#/login">Log In</a></li>
           <li ng-hide="isLoggedIn()"><a href="/#/register">Register</a></li>
         </ul>
-      </nav>
+      </div>
 
-      <div class="main">
+      <div class="layout">
         <ui-view></ui-view>
       </div>
 

@@ -1,5 +1,191 @@
-nav {
-  a {
-    padding: 5px 10px;
-  } // a
-} // nav
+// Susy setup ----------------------------------
+$total-columns     : 12;
+$column-width      : 4em;
+$gutter-width      : 1em;
+$grid-padding      : $gutter-width;
+
+@include border-box-sizing;
+
+$small             : 30em;
+$medium            : 39em;
+$large             : 56em;
+
+.navi {
+  width: 100%;
+  min-height: 60px;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.85);
+  @include box-shadow;
+  top: 0;
+
+  #logo {
+    display: inline-block;
+    margin: 5px 10px;
+    margin-bottom: 0;
+    height: 50px;
+
+    &:hover {
+      background: none;
+    } // logo:hover
+  } // logo
+
+  img {
+    max-width: 300px;
+  } // img
+
+  ul {
+    text-align: center;
+    margin-bottom: 5px;
+
+    li {
+      width: 100%;
+
+      &:hover {
+        color: darken($red, 7);
+        text-decoration: none;
+        cursor: pointer;
+        background: $lightgray;
+      } // li:hover
+    } // li
+
+    a {
+      padding: 5px 10px;
+      line-height: 160%;
+
+      &:hover {
+        background: none;
+      } // a:hover
+    } // a
+  } // ul
+
+  @include at-breakpoint($medium) {
+    @include single-transition(all, .5s, eas-out);
+
+    ul {
+      float: right;
+      margin-bottom: 0;
+
+      li {
+        float: left;
+        width: auto;
+      } // li
+
+      a {
+        line-height: 60px;
+      } // a
+    } // ul
+  } // medium
+
+} // navi
+
+// Content -------------------------------------
+.layout {
+  @include container;
+  padding: 0 3%;
+  margin-top: 120px;
+  margin-bottom: 100px;
+
+  .page-header-line {
+    width: 100%;
+    height: 1px;
+    background: lighten($silver, 15);
+  } // page-header-line
+
+  .postAReech {
+    // margin-left: 17px;
+    // margin-right: 17px;
+    margin-bottom: 30px;
+
+    input {
+      margin-right: 30px;
+      margin-bottom: 10px;
+      width: 100%;
+    } // input
+
+    button {
+      float: right;
+    } // button
+  } // postAReech
+
+  .reech {
+    @include box-shadow;
+    background: $silver;
+    color: $red;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+
+    p {
+      font-size: 1.4rem;
+      margin-bottom: .3rem;
+    } // p
+
+    span {
+      color: #fff;
+      font-size: .8rem;
+      margin-right: 5px;
+    } // span
+
+    a {
+      color: darken(#fff, 10);
+      padding: none;
+      font-size: .8rem;
+
+      &:hover {
+        color: darken(#fff, 75);
+        background: none;
+      }
+    }
+  } // reech
+
+  @include at-breakpoint($small) {
+    @include single-transition(all, .5s, ease-in);
+
+    .postAReech {
+      width: 450px;
+      margin: auto;
+      margin-bottom: 30px;
+
+      input {
+        width: auto;
+      } // input
+
+      button {
+        float: none;
+      } // button
+    } // postAReech
+
+    .homecontent {
+      @include span-columns(5);
+      @include pre(1);
+      @include post(1);
+    } // homecontent
+  } // small
+
+  @include at-breakpoint($medium) {
+    @include single-transition(all, .5s, ease-in);
+    @include span-columns(6);
+    @include pre(1);
+    @include post(1);
+    margin-top: 60px;
+
+    .postAReech {
+
+      input {
+        margin-right: 10px;
+      } // input
+    } // postAReech
+  } // medium
+
+  @include at-breakpoint($large) {
+    @include single-transition(all, 1s, ease-in);
+    @include span-columns(7);
+    @include pre(3);
+    @include post(3);
+  } // large
+} // layout
+
+// Footer -------------------------------------------
+
+footer {
+  @include clearfix;
+} // footer
