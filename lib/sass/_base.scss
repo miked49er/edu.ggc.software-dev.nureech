@@ -8,27 +8,28 @@ body {
   line-height: 120%;
   background: $offwhite;
   color: $silver;
-}
+} // body
 
 #{headings()} {
   font-family: $font-secondary;
   font-weight: bold;
   color: $red;
   @include text-shadow(#000);
-}
+} // headings
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: darken($red, 15);
   margin-bottom: .4rem;
-  border-bottom: 1px solid lighten($silver, 15);
   padding-top: 10px;
-}
+  padding-left: 20px;
+} // h1
 
 h3 {
   font-weight: lighter;
   font-size: 1.4rem;
-}
+  margin-bottom: .4rem;
+} // h3
 
 a {
   font-size: 1rem;
@@ -40,16 +41,17 @@ a {
     text-decoration: none;
     cursor: pointer;
     background: $lightgray;
-  }
+  } // a:hover
 
   &:active {
     text-decoration: none;
     color: lighten($red, 7);
-  }
-}
+  } // a:active
+} // a
 
 form {
   @include clearfix;
+  margin-top: 10px;
   margin-bottom: 10px;
 
   input {
@@ -66,4 +68,8 @@ form {
     color: $red;
     padding: 5px 10px;
   } // button
-}
+} // form
+
+.page-header {
+  border-bottom: none;
+} // page-header
