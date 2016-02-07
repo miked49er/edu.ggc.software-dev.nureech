@@ -8,6 +8,7 @@ body {
   line-height: 120%;
   background: $offwhite;
   color: $silver;
+  overflow: scroll;
 } // body
 
 #{headings()} {
