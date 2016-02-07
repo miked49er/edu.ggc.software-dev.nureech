@@ -107,6 +107,20 @@ $large             : 56em;
     } // button
   } // postAReech
 
+  h3 {
+    margin-bottom: 30px;
+
+    a {
+      font-size: 1.4rem;
+      text-decoration: underline;
+
+      &:hover {
+        background: none;
+        text-decoration: underline;
+      } // a:hover
+    } // a
+  } // h3
+
   .reech {
     @include box-shadow;
     background: $silver;
