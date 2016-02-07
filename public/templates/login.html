@@ -1,14 +1,14 @@
 <section>
   <div  class="page-header">
     <h1>Welcome to NuReech</h1>
-    <p>Start Reeching Out</p>
+    <div class="page-header-line"></div>
   </div>
 
   <div ng-show="error" class="alert-danger row">
     <span>{{error.message}}</span>
   </div>
-  <form ng-submit="logIn()">
-    <h3> Reech in!</h3>
+  <form class="reechIn" ng-submit="logIn()">
+    <h3>Reech in!</h3>
 
     <div class="form-group">
     <input type="text"
