@@ -111,7 +111,6 @@ a:hover {
   color: #901919;
   text-decoration: none;
   cursor: pointer;
-  background: rgba(195, 195, 195, 0.26);
 }
 /* line 46, ../../lib/sass/_base.scss */
 a:active {
@@ -119,14 +118,21 @@ a:active {
   color: #cc2323;
 }
 
-/* line 52, ../../lib/sass/_base.scss */
+/* line 56, ../../lib/sass/_base.scss */
+ul li:hover {
+  background: rgba(195, 195, 195, 0.26);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 64, ../../lib/sass/_base.scss */
 form {
   overflow: hidden;
   *zoom: 1;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-/* line 57, ../../lib/sass/_base.scss */
+/* line 69, ../../lib/sass/_base.scss */
 form input {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -135,7 +141,7 @@ form input {
   border: #a0a0a0;
   padding: 5px 10px;
 }
-/* line 64, ../../lib/sass/_base.scss */
+/* line 76, ../../lib/sass/_base.scss */
 form button {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -146,7 +152,7 @@ form button {
   padding: 5px 10px;
 }
 
-/* line 73, ../../lib/sass/_base.scss */
+/* line 85, ../../lib/sass/_base.scss */
 .page-header {
   border-bottom: none;
 }
@@ -176,38 +182,39 @@ form button {
   margin-bottom: 0;
   height: 50px;
 }
-/* line 27, ../../lib/sass/_layout.scss */
-.navi #logo:hover {
-  background: none;
-}
-/* line 32, ../../lib/sass/_layout.scss */
+/* line 28, ../../lib/sass/_layout.scss */
 .navi img {
   max-width: 300px;
 }
-/* line 36, ../../lib/sass/_layout.scss */
+/* line 32, ../../lib/sass/_layout.scss */
 .navi ul {
   text-align: center;
   margin-bottom: 5px;
 }
-/* line 40, ../../lib/sass/_layout.scss */
+/* line 36, ../../lib/sass/_layout.scss */
 .navi ul li {
   width: 100%;
 }
-/* line 43, ../../lib/sass/_layout.scss */
+/* line 39, ../../lib/sass/_layout.scss */
 .navi ul li:hover {
   color: #901919;
   text-decoration: none;
   cursor: pointer;
   background: rgba(195, 195, 195, 0.26);
 }
-/* line 51, ../../lib/sass/_layout.scss */
+/* line 47, ../../lib/sass/_layout.scss */
 .navi ul a {
   padding: 5px 10px;
   line-height: 160%;
 }
-/* line 55, ../../lib/sass/_layout.scss */
-.navi ul a:hover {
-  background: none;
+/* line 51, ../../lib/sass/_layout.scss */
+.navi ul a:visited {
+  text-decoration: none;
+  color: #cc2323;
+}
+/* line 56, ../../lib/sass/_layout.scss */
+.navi ul a:focus {
+  text-decoration: none;
 }
 @media (min-width: 39em) {
   /* line 13, ../../lib/sass/_layout.scss */
@@ -217,23 +224,23 @@ form button {
     -webkit-transition: all 0.5s eas-out;
     transition: all 0.5s eas-out;
   }
-  /* line 64, ../../lib/sass/_layout.scss */
+  /* line 65, ../../lib/sass/_layout.scss */
   .navi ul {
     float: right;
     margin-bottom: 0;
   }
-  /* line 68, ../../lib/sass/_layout.scss */
+  /* line 69, ../../lib/sass/_layout.scss */
   .navi ul li {
     float: left;
     width: auto;
   }
-  /* line 73, ../../lib/sass/_layout.scss */
+  /* line 74, ../../lib/sass/_layout.scss */
   .navi ul a {
     line-height: 60px;
   }
 }
 
-/* line 82, ../../lib/sass/_layout.scss */
+/* line 83, ../../lib/sass/_layout.scss */
 .layout {
   *zoom: 1;
   max-width: 61em;
@@ -252,38 +259,37 @@ form button {
   display: table;
   clear: both;
 }
-/* line 88, ../../lib/sass/_layout.scss */
+/* line 89, ../../lib/sass/_layout.scss */
 .layout .page-header-line {
   width: 100%;
   height: 1px;
   background: #c6c6c6;
 }
-/* line 94, ../../lib/sass/_layout.scss */
+/* line 95, ../../lib/sass/_layout.scss */
 .layout .postAReech {
   margin-bottom: 30px;
 }
-/* line 99, ../../lib/sass/_layout.scss */
+/* line 100, ../../lib/sass/_layout.scss */
 .layout .postAReech input {
   margin-right: 30px;
   margin-bottom: 10px;
   width: 100%;
 }
-/* line 105, ../../lib/sass/_layout.scss */
+/* line 106, ../../lib/sass/_layout.scss */
 .layout .postAReech button {
   float: right;
 }
-/* line 110, ../../lib/sass/_layout.scss */
+/* line 111, ../../lib/sass/_layout.scss */
 .layout h3 {
   margin-bottom: 30px;
 }
-/* line 113, ../../lib/sass/_layout.scss */
+/* line 114, ../../lib/sass/_layout.scss */
 .layout h3 a {
   font-size: 1.4rem;
   text-decoration: underline;
 }
-/* line 117, ../../lib/sass/_layout.scss */
+/* line 118, ../../lib/sass/_layout.scss */
 .layout h3 a:hover {
-  background: none;
   text-decoration: underline;
 }
 /* line 124, ../../lib/sass/_layout.scss */
@@ -316,31 +322,30 @@ form button {
 /* line 147, ../../lib/sass/_layout.scss */
 .layout .reech a:hover {
   color: #404040;
-  background: none;
 }
 @media (min-width: 30em) {
-  /* line 82, ../../lib/sass/_layout.scss */
+  /* line 83, ../../lib/sass/_layout.scss */
   .layout {
     -moz-transition: all 0.5s ease-in;
     -o-transition: all 0.5s ease-in;
     -webkit-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
   }
-  /* line 157, ../../lib/sass/_layout.scss */
+  /* line 156, ../../lib/sass/_layout.scss */
   .layout .postAReech {
     width: 450px;
     margin: auto;
     margin-bottom: 30px;
   }
-  /* line 162, ../../lib/sass/_layout.scss */
+  /* line 161, ../../lib/sass/_layout.scss */
   .layout .postAReech input {
     width: auto;
   }
-  /* line 166, ../../lib/sass/_layout.scss */
+  /* line 165, ../../lib/sass/_layout.scss */
   .layout .postAReech button {
     float: none;
   }
-  /* line 171, ../../lib/sass/_layout.scss */
+  /* line 170, ../../lib/sass/_layout.scss */
   .layout .homecontent {
     width: 70.58824%;
     float: left;
@@ -350,7 +355,7 @@ form button {
   }
 }
 @media (min-width: 39em) {
-  /* line 82, ../../lib/sass/_layout.scss */
+  /* line 83, ../../lib/sass/_layout.scss */
   .layout {
     -moz-transition: all 0.5s ease-in;
     -o-transition: all 0.5s ease-in;
@@ -363,13 +368,13 @@ form button {
     margin-right: 12.82051%;
     margin-top: 60px;
   }
-  /* line 187, ../../lib/sass/_layout.scss */
+  /* line 186, ../../lib/sass/_layout.scss */
   .layout .postAReech input {
     margin-right: 10px;
   }
 }
 @media (min-width: 56em) {
-  /* line 82, ../../lib/sass/_layout.scss */
+  /* line 83, ../../lib/sass/_layout.scss */
   .layout {
     -moz-transition: all 1s ease-in;
     -o-transition: all 1s ease-in;
@@ -383,7 +388,7 @@ form button {
   }
 }
 
-/* line 203, ../../lib/sass/_layout.scss */
+/* line 202, ../../lib/sass/_layout.scss */
 footer {
   overflow: hidden;
   *zoom: 1;
